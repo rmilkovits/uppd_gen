@@ -2,10 +2,38 @@
 <html lang='en'>
 <head>
   <meta charset='utf-8'>
-  <title>my first pdfmake example</title>
+  <title>UPPD Maker</title>
+  <!-- CDNs for the pdfmake module -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.1/pdfmake.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.3.0-beta.1/vfs_fonts.min.js'></script>
+  <!-- Stylesheet include -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Javascript include -->
   <script src='gen.js'></script>
 </head>
+
 <body>
+<!-- Top Menu Bar -->
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#guide">Guide</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+<!-- Form Instructions -->
+<div>
+  <div>To make a Utility Pre-Patent Document (UPPD), input your invention information below, or upload an image of your completed UPPD</div>
+</div>
+
+<!-- Input Form -->
+<form action="upload.php" method="post" enctype="multipart/form-data">
+  <label for="invtitle">Invention Title:</label><br>
+  <input type="text" id="invtitle" name="invtitle" value=""><br>
+  <label for="invfig">Invention Figure:</label><br>
+  <input type="file" id="invfig" name="invfig" value=""><br>
+  <label for="invdesc">Invention Description:</label><br>
+  <input type="text" id="invdesc" name="invdesc" value=""><br><br>
+  <input type="submit" value="Submit">
+</form>
 </body>
